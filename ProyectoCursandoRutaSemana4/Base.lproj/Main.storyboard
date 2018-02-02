@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,116 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProyectoCursandoRutaSemana4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wFH-Zh-WJH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9L-fS-7z5">
+                                <rect key="frame" x="88" y="627" width="199" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHO-yZ-Ric">
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Standard"/>
+                                        <connections>
+                                            <action selector="vistaStandard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ttV-TB-cQQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhf-Ps-BjZ">
+                                        <rect key="frame" x="80" y="0.0" width="52" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Satélite"/>
+                                        <connections>
+                                            <action selector="vistaSatelite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NlN-08-02N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2B-8m-DPY">
+                                        <rect key="frame" x="149" y="0.0" width="50" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Híbrido"/>
+                                        <connections>
+                                            <action selector="vistaHibrido:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBq-Mu-dul"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f50-O3-1Sj">
+                                <rect key="frame" x="162" y="30" width="50" height="50"/>
+                                <state key="normal" image="play-icon.png"/>
+                                <connections>
+                                    <action selector="rutaBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MRb-16-0zf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar Ruta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRM-fP-vtE">
+                                <rect key="frame" x="156.5" y="85" width="63.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZJV-P8-rEp">
+                                <rect key="frame" x="330" y="302.5" width="25" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6F-xM-d8h">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="CId-yN-XhA"/>
+                                            <constraint firstAttribute="width" constant="25" id="a18-zc-JSU"/>
+                                            <constraint firstAttribute="height" constant="27" id="ouV-Wb-5NT"/>
+                                        </constraints>
+                                        <state key="normal" image="icono+.png"/>
+                                        <connections>
+                                            <action selector="zoonIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zSd-UY-6vi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBZ-MF-MOw">
+                                        <rect key="frame" x="0.0" y="37" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="60i-vz-dSk"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="icon-.png"/>
+                                        <connections>
+                                            <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUD-B3-KAC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wFH-Zh-WJH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="238-Bg-DkE"/>
+                            <constraint firstItem="wFH-Zh-WJH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9Vp-Xg-neY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B9L-fS-7z5" secondAttribute="bottom" constant="10" id="BoT-E9-ozy"/>
+                            <constraint firstItem="f50-O3-1Sj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="Nts-h2-rOH"/>
+                            <constraint firstItem="wFH-Zh-WJH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RrX-6M-PFH"/>
+                            <constraint firstItem="f50-O3-1Sj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UKn-cI-ILA"/>
+                            <constraint firstItem="ZJV-P8-rEp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZZ9-bH-xfs"/>
+                            <constraint firstItem="wFH-Zh-WJH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fqZ-ef-W2k"/>
+                            <constraint firstItem="B9L-fS-7z5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iNs-2D-KkK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZJV-P8-rEp" secondAttribute="trailing" constant="20" id="jMX-bA-0x2"/>
+                            <constraint firstItem="QRM-fP-vtE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lM7-en-XkD"/>
+                            <constraint firstItem="QRM-fP-vtE" firstAttribute="top" secondItem="f50-O3-1Sj" secondAttribute="bottom" constant="5" id="ppB-5v-b2n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="híbridoBtn" destination="j2B-8m-DPY" id="ZrO-ui-CV4"/>
+                        <outlet property="mapVista" destination="wFH-Zh-WJH" id="KDd-0f-MSZ"/>
+                        <outlet property="mapaBtn" destination="zHO-yZ-Ric" id="eII-KR-b1H"/>
+                        <outlet property="sateliteBtn" destination="Hhf-Ps-BjZ" id="vCL-Fi-KnL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-.png" width="512" height="512"/>
+        <image name="icono+.png" width="512" height="512"/>
+        <image name="play-icon.png" width="50" height="50"/>
+    </resources>
 </document>

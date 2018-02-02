@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		834F11242024F2BB00D1DDCA /* icon-.png in Resources */ = {isa = PBXBuildFile; fileRef = 834F11222024F2BA00D1DDCA /* icon-.png */; };
+		834F11252024F2BB00D1DDCA /* icono+.png in Resources */ = {isa = PBXBuildFile; fileRef = 834F11232024F2BA00D1DDCA /* icono+.png */; };
+		83723FF2202495C500EA7D3B /* play-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83723FF1202495C500EA7D3B /* play-icon.png */; };
 		D43E6FE22018D31000462378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E6FE12018D31000462378 /* AppDelegate.swift */; };
 		D43E6FE42018D31000462378 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E6FE32018D31000462378 /* ViewController.swift */; };
 		D43E6FE72018D31000462378 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E6FE52018D31000462378 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		834F11222024F2BA00D1DDCA /* icon-.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-.png"; sourceTree = "<group>"; };
+		834F11232024F2BA00D1DDCA /* icono+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icono+.png"; sourceTree = "<group>"; };
+		83723FF1202495C500EA7D3B /* play-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-icon.png"; sourceTree = "<group>"; };
 		D43E6FDE2018D31000462378 /* ProyectoCursandoRutaSemana4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoCursandoRutaSemana4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43E6FE12018D31000462378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D43E6FE32018D31000462378 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,9 @@
 				D43E6FE12018D31000462378 /* AppDelegate.swift */,
 				D43E6FE32018D31000462378 /* ViewController.swift */,
 				D43E6FE52018D31000462378 /* Main.storyboard */,
+				834F11222024F2BA00D1DDCA /* icon-.png */,
+				834F11232024F2BA00D1DDCA /* icono+.png */,
+				83723FF1202495C500EA7D3B /* play-icon.png */,
 				D43E6FEB2018D31000462378 /* Assets.xcassets */,
 				D43E6FED2018D31000462378 /* LaunchScreen.storyboard */,
 				D43E6FF02018D31000462378 /* Info.plist */,
@@ -235,6 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83723FF2202495C500EA7D3B /* play-icon.png in Resources */,
+				834F11242024F2BB00D1DDCA /* icon-.png in Resources */,
+				834F11252024F2BB00D1DDCA /* icono+.png in Resources */,
 				D43E6FEF2018D31000462378 /* LaunchScreen.storyboard in Resources */,
 				D43E6FEC2018D31000462378 /* Assets.xcassets in Resources */,
 				D43E6FE72018D31000462378 /* Main.storyboard in Resources */,
@@ -430,12 +442,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JLMW7WJ8B5;
 				INFOPLIST_FILE = ProyectoCursandoRutaSemana4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.palauinnova.ProyectoCursandoRutaSemana4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,12 +459,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JLMW7WJ8B5;
 				INFOPLIST_FILE = ProyectoCursandoRutaSemana4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.palauinnova.ProyectoCursandoRutaSemana4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
