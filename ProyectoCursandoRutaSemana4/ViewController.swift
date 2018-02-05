@@ -105,6 +105,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         puntoUltimoRuta = CLLocation(latitude: puntoActual.latitude, longitude: puntoActual.longitude)
         puntosRutaArray.append(puntoActual)
+        zoomDistance = 2000
         
     }
     
@@ -112,7 +113,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func zoonIn(_ sender: Any) {
         
-        if camara.altitude >= 1000 && camara.altitude <= 7000 {
+        if camara.altitude > 1000 && camara.altitude <= 7000 {
             zoomDistance -= 1000.0
         }
         
